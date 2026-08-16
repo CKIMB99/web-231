@@ -2,5 +2,5 @@
 
    ## Contributors
 
-   - <Richard Krasso>
-   - <Chad Kimble>
+   - <Instructor: Richard Krasso>
+   - <Me: Chad Kimble>

@@ -2,5 +2,5 @@
 
    ## Contributors
 
-   - <Your Instructor's Full Name - Richard Krasso>
-   - <Your First and Last Name - Chad Kimble>
+   - <Richard Krasso>
+   - <Chad Kimble>

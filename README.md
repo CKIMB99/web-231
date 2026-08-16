@@ -2,5 +2,5 @@
 
    ## Contributors
 
-   - <Instructor: Richard Krasso>
-   - <Me: Chad Kimble>
+   - <Course Instructor: Richard Krasso>
+   - <Student: Chad Kimble>

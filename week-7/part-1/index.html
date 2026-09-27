@@ -1,0 +1,171 @@
+<!-- ==================================================
+     Timed Practice Quiz Application
+     ==================================================
+     This HTML document provides a timed math quiz interface.
+     - Participants enter their first name to start
+     - A countdown timer tracks remaining quiz time
+     - Users answer 5 math problems
+     - Results display showing total correct answers
+     ================================================== -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Timed Practice Quiz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <!-- Page header with title and instructions -->
+    <header>
+      <h1>Timed Practice Quiz</h1>
+      <p>Complete the setup form to begin your timed practice quiz.</p>
+    </header>
+    <main>
+      <!-- Two-column layout: sidebar (left) and quiz section (right) -->
+      <div class="app-grid">
+        <!-- Left sidebar with setup form and summary -->
+        <aside class="sidebar">
+          <!-- Quiz setup form - initial data entry -->
+          <section class="setup-section">
+            <h2>Quiz Setup</h2>
+
+            <p class="section-note">
+              Enter your first name to begin. Your participant summary will
+              appear after the quiz starts.¬ç
+            </p>
+
+            <!-- Data entry form for participant information -->
+            <form id="quizSetup" novalidate>
+              <!-- First name input field -->
+              <div class="form-row">
+                <label for="firstName">First Name</label>
+                <input
+                  type="text"
+                  id="firstName"
+                  name="firstName"
+                  placeholder="Enter your first name"
+                  required
+                />
+              </div>
+
+              <!-- Error message display area -->
+              <p id="errorBox" class="error-box"></p>
+
+              <!-- Form submission button -->
+              <div class="form-actions">
+                <button type="submit" id="startQuizBtn">Start Quiz</button>
+              </div>
+            </form>
+          </section>
+
+          <!-- Participant summary - shown after quiz starts -->
+          <section id="summarySection" class="summary-section hidden">
+            <h2>Participant Summary</h2>
+
+            <!-- Display confirmed participant information -->
+            <div class="summary-grid">
+              <p>
+                <strong>First Name:</strong>
+                <span id="summaryFirstName"></span>
+              </p>
+            </div>
+          </section>
+        </aside>
+
+        <!-- Main quiz section - shown after quiz starts -->
+        <section id="quizSection" class="quiz-section hidden">
+          <!-- Header with title and countdown timer -->
+          <div class="quiz-header">
+            <div>
+              <h2>Quiz Questions</h2>
+              <p class="section-note">
+                Answer each question before the timer reaches zero.
+              </p>
+            </div>
+
+            <!-- Countdown timer display -->
+            <div class="timer-box">
+              <span class="timer-label">Time Left</span>
+              <!-- Display current time remaining -->
+              <input id="quizClock" value="60" readonly />
+            </div>
+          </div>
+
+          <!-- Quiz questions container -->
+          <div id="quizQuestions" class="questions-list">
+            <!-- Question 1 -->
+            <div class="question-row">
+              <div class="question-content">
+                <div class="question-text">
+                  <label for="question1">1) 5 + 2x = 25</label>
+                </div>
+                <!-- User input for question 1 -->
+                <div class="question-input">
+                  <input id="question1" type="text" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-row">
+              <div class="question-content">
+                <div class="question-text">
+                  <label for="question2">2) 30 - 5x = 10</label>
+                </div>
+                <div class="question-input">
+                  <input id="question2" type="text" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-row">
+              <div class="question-content">
+                <div class="question-text">
+                  <label for="question3">3) 6 + 3x = -12</label>
+                </div>
+                <div class="question-input">
+                  <input id="question3" type="text" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-row">
+              <div class="question-content">
+                <div class="question-text">
+                  <label for="question4">4) 44 - 12x = -16</label>
+                </div>
+                <div class="question-input">
+                  <input id="question4" type="text" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-row">
+              <div class="question-content">
+                <div class="question-text">
+                  <label for="question5">5) 48 + 6x = 6</label>
+                </div>
+                <div class="question-input">
+                  <input id="question5" type="text" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Results section - shown when quiz time expires or completes -->
+      <section id="resultsSection" class="results-section hidden">
+        <h2>Quiz Results</h2>
+        <!-- Display score message populated by JavaScript -->
+        <p id="resultsMessage"></p>
+      </section>
+    </main>
+  </body>
+</html>
